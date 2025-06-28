@@ -5,12 +5,15 @@ class BookDetailsAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Icon(Icons.clear, size: 28),
-        Icon(Icons.shopping_cart_outlined, size: 28),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(right: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Icon(Icons.clear, size: 28),
+          Icon(Icons.shopping_cart_outlined, size: 28),
+        ],
+      ),
     );
   }
 }
