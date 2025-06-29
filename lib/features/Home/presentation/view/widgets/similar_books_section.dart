@@ -13,9 +13,7 @@ class SlimilarBooksSection extends StatelessWidget {
           alignment: Alignment.bottomLeft,
           child: Text(
             'You can also like',
-            style: Styles.textStyle16.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+            style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         SizedBox(height: 10),

@@ -11,18 +11,12 @@ abstract class AppRouter {
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => SplashView()),
-      GoRoute(
-        path: kHomeView,
-        builder: (context, state) => HomeView(),
-      ),
+      GoRoute(path: kHomeView, builder: (context, state) => HomeView()),
       GoRoute(
         path: kBookDetailsView,
         builder: (context, state) => BookDetailsView(),
       ),
-      GoRoute(
-        path: kSearchView,
-        builder: (context, state) => SearchView(),
-      ),
+      GoRoute(path: kSearchView, builder: (context, state) => SearchView()),
     ],
   );
 }
