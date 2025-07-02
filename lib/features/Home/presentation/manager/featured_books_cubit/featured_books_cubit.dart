@@ -1,5 +1,5 @@
 import 'package:bookly_app/features/Home/data/repos/home_repo_impl.dart';
-import 'package:bookly_app/features/Home/presentation/view_model/featured_books_cubit/featured_books_state.dart';
+import 'package:bookly_app/features/Home/presentation/manager/featured_books_cubit/featured_books_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
