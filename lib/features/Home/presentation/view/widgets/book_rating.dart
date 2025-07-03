@@ -29,7 +29,7 @@ class BookRating extends StatelessWidget {
         ),
         SizedBox(width: 5),
         Text(
-          '$count',
+          '($count)',
           style: Styles.textStyle14.copyWith(color: Colors.grey),
         ),
       ],

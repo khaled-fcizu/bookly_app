@@ -22,9 +22,11 @@ class BookDetailsSection extends StatelessWidget {
                   bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
             ),
           ),
-          SizedBox(height: 35),
+          SizedBox(height: 30),
           Text(
             bookModel.volumeInfo.title!,
+            textAlign: TextAlign.center,
+
             style: Styles.textStyle30.copyWith(
               fontWeight: FontWeight.w600,
             ),
