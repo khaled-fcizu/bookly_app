@@ -27,8 +27,9 @@ class FeaturedListView extends StatelessWidget {
                         state
                             .books[index]
                             .volumeInfo
-                            .imageLinks!
-                            .thumbnail,
+                            .imageLinks
+                            ?.thumbnail ??
+                        '',
                   ),
                 );
               },

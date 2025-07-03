@@ -7,18 +7,23 @@ class SlimilarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Align(
-          alignment: Alignment.bottomLeft,
-          child: Text(
-            'You can also like',
-            style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.only(left: 30),
+      child: Column(
+        children: [
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle16.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-        ),
-        SizedBox(height: 10),
-        SimilarBooksListView(),
-      ],
+          SizedBox(height: 10),
+          SimilarBooksListView(),
+        ],
+      ),
     );
   }
 }
