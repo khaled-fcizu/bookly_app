@@ -16,19 +16,26 @@ class BookDetailsSection extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width),
-            child: CustomBookImageItem(),
+            child: CustomBookImageItem(
+              imageUrl:
+                  'http://books.google.com/books/content?id=4MlcEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+            ),
           ),
           SizedBox(height: 35),
           Text(
             'The Jungle Book',
-            style: Styles.textStyle30.copyWith(fontWeight: FontWeight.w600),
+            style: Styles.textStyle30.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
           ),
           SizedBox(height: 6),
           Opacity(
             opacity: .7,
             child: Text(
               'Rudyard Kipling',
-              style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic),
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+              ),
             ),
           ),
           SizedBox(height: 16),
