@@ -15,7 +15,7 @@ class ServerFailure extends Failure {
         return ServerFailure('send to server is timeout');
 
       case DioExceptionType.receiveTimeout:
-        return ServerFailure('recieve from server is timeout');
+        return ServerFailure('No internet connection');
       case DioExceptionType.badCertificate:
         return ServerFailure('ssh certificate un accepted');
 
