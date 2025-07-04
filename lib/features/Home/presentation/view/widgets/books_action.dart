@@ -17,12 +17,13 @@ class BooksAction extends StatelessWidget {
                 bottomLeft: Radius.circular(12),
               ),
               backgroundColor: Colors.white,
-              buttonTitle: '19.99€',
+              buttonTitle: 'Free',
               textColor: Colors.black,
             ),
           ),
           Expanded(
             child: CustomButton(
+              onPressed: () {},
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(12),
                 bottomRight: Radius.circular(12),
