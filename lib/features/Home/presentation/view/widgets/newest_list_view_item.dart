@@ -11,8 +11,17 @@ import 'package:go_router/go_router.dart';
 class NewestListViewItem extends StatelessWidget {
   const NewestListViewItem({super.key, required this.bookModel});
   final BookModel bookModel;
+
   @override
   Widget build(BuildContext context) {
+    final title = bookModel.volumeInfo.title ?? 'No Title';
+    final authors = bookModel.volumeInfo.authors;
+    final authorName =
+        (authors != null && authors.isNotEmpty)
+            ? authors[0]
+            : 'Unknown Author';
+    final imageUrl = bookModel.volumeInfo.imageLinks?.thumbnail ?? '';
+
     return GestureDetector(
       onTap: () {
         GoRouter.of(
@@ -23,10 +32,7 @@ class NewestListViewItem extends StatelessWidget {
         height: 120,
         child: Row(
           children: [
-            CustomBookImageItem(
-              imageUrl:
-                  bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
-            ),
+            CustomBookImageItem(imageUrl: imageUrl),
             SizedBox(width: 30),
             Expanded(
               child: Column(
@@ -35,7 +41,7 @@ class NewestListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      bookModel.volumeInfo.title!,
+                      title,
                       style: Styles.textStyle20.copyWith(
                         fontWeight: FontWeight.w600,
                         fontFamily: kGtSecrta,
@@ -46,10 +52,11 @@ class NewestListViewItem extends StatelessWidget {
                   ),
                   SizedBox(height: 3),
                   Text(
-                    bookModel.volumeInfo.authors![0],
-                    style: Styles.textStyle14,
+                    authorName,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 3),
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
