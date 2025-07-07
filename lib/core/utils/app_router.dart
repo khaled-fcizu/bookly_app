@@ -33,6 +33,7 @@ abstract class AppRouter {
               ),
             ),
       ),
+
       GoRoute(
         path: kSearchView,
         builder: (context, state) => SearchView(),
